@@ -103,7 +103,7 @@
 - Names of the resources 
 
 ## References
-- AWS CDK Workshop
-- CDK for Terraform
-- CDK for EKS
-- Construct Hub
+- [CDK Workshop](https://cdkworkshop.com/)
+- [CDK for Terraform](https://developer.hashicorp.com/terraform/cdktf)
+- [CDK for Kubernetes](https://cdk8s.io/)
+- [Construct Hub](https://constructs.dev/)
