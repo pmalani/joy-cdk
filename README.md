@@ -1,7 +1,8 @@
-# Joy Infrastructure as Code (IaC)
+# Joy of Infrastructure as Code (IaC)
 
 ## What is IaC
 - Build infrastructure from code
+- Not, manually by hand
 - Benefits
   - Maintainable
   - Repeatable
