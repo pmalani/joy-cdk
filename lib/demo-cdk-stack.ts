@@ -12,7 +12,9 @@ export class DemoCdkStack extends Stack {
             encryption: s3.BucketEncryption.S3_MANAGED,
             enforceSSL: true,
             versioned: true,
-            removalPolicy: RemovalPolicy.RETAIN
+            // removalPolicy: RemovalPolicy.RETAIN // sensible default
+            removalPolicy: RemovalPolicy.DESTROY, // for demo
+            autoDeleteObjects: true
         });
     }
 

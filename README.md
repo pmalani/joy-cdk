@@ -15,40 +15,39 @@
 ## Declarative vs. Imperative
 - Declarative
   - Easier?
-  - YAML or customer language
-  - Harder to do this that imperative languages excel at:
+  - YAML (or custom language)
+  - Harder to do things that imperative languages excel at:
     - Parameters
     - Conditions
     - Iteration
   - Ex: AWS Cloud Formation
-  - Every AWS services have a way to manage using Cloud Formation
+  - All AWS services have a way to manage using Cloud Formation
 - Imperative
-  - Harder to started
+  - Harder to get started
   - Harder to maintain
-  - AWS CDK
-- Why not both?
+  - Ex: AWS CDK
 
 ## What is AWS CDK
 - Cloud Development Kit (CDK) build on top on Cloud Formation
-- CDK is Node/Npm based
-- While natively supporting TypeScript (recommended), also supports other languages using JII
+- CDK is Node/NPM based
+- While natively supporting TypeScript (recommended), also supports other languages using **jsii**
   - C#
   - Java
   - Python
   - Etc.
-- A CDK is made up of:
-  - Application
+- A CDK Application is made up of:
+  - App(lication)
   - Stack(s)
   - Constructs
-- There are three levels of abstracts of Constructs
+- There are three levels of abstractions for Constructs
   - Level 1 (L1): Correspond directly to Cloud Formation
     - Start with Cfn
-    - Example:
+    - Example: `CfnReplicationGroup`
   - Level 2 (L2): Written by CDK team
-    - With sensible defaults
-    - Brining together multiple L1 constructs
-    - Example:  
-  - Level 3 (L3): Written by you or others
+    - Curated with sensible defaults
+    - Bring together multiple L1 constructs
+    - Example: `Bucket`
+  - Level 3 (L3): Written by us or others
     - Level L1 and L2 constructs
 
 ## CDK Lifecycle
@@ -58,11 +57,11 @@
   - Create s3 buckets and other resources for CDK's use
 - build
   - `npm run build`
-  - In TypeScript compile to JavaScript
+  - In TypeScript, compile to JavaScript
 - cdk synth
   - To generate the cloud formation artifacts
 - cdk diff
-  - Optionally to see the differences that will be applied
+  - Optionally, to see the differences that will be applied
 - cdk deploy
   - To push the resources to AWS
 - cdk destroy
@@ -80,7 +79,7 @@
 - Highlights
   - Uses an existing bucket
   - Assigns appropriate role
-  - Uses L2 constructs still in alpha
+  - Uses L2 constructs still in alpha ([package.json](package.json))
 - Code: [demo-flink-cdk-stack.ts](lib%2Fdemo-flink-cdk-stack.ts)
 - `npm run cdk synth DemoFlinkCdkStack`
 - `npm run cdk deploy DemoFlinkCdkStack`
@@ -104,6 +103,8 @@
 
 ## References
 - [CDK Workshop](https://cdkworkshop.com/)
+- [CDK Developer Guide](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
+- [CDK API Reference](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html)
 - [CDK for Terraform](https://developer.hashicorp.com/terraform/cdktf)
 - [CDK for Kubernetes](https://cdk8s.io/)
 - [Construct Hub](https://constructs.dev/)
